@@ -48,7 +48,7 @@ auth-service-test-BackDev/
 ├── migrations/
 │   └── 20241203220540_migration_users_table.sql
 └── .env
-
+```
 ## Установка и запуск
 
 ### Предварительные требования
@@ -69,7 +69,7 @@ MIGRATION_DIR=./migrations
 DATABASE_URL=postgres://your_database_user:your_database_password@pg:5432/your_database_name?sslmode=disable
 SECRET_KEY=your_secret_key
 PORT=8080
-
+```
 ## API Маршруты
 
 ### Генерация токенов
@@ -92,7 +92,7 @@ Content-Type: application/json
   "access_token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9...",
   "refresh_token": "dGhpc19pcyBhX3JlZnJlc2hfZG9hdA=="
 }
-
+```
 ### Обновление токенов
 
 - **URL:** `/auth/refresh-tokens`
@@ -114,7 +114,7 @@ Content-Type: application/json
   "access_token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9...",
   "refresh_token": "dGhpc19pcyBhX3JlZnJlc2hfZG9hdA=="
 }
-
+```
 ## Миграции базы данных
 
 Миграции управляются с помощью **Goose**. Файлы миграций находятся в директории `migrations/`.
@@ -124,15 +124,15 @@ Content-Type: application/json
 **Накат миграций:**
 ```bash
 make local-migration-up
-
+```
 **Откат миграций:**
 ```bash
 make local-migration-down
-
+```
 **Проверка статуса миграций**
 ```bash
 make local-migration-status
-
+```
 ## Docker
 
 Проект настроен для использования Docker. В `docker-compose.yaml` определены два сервиса:
