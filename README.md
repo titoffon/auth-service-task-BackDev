@@ -29,8 +29,7 @@ Auth-Service-Test-BackDev — это сервис аутентификации, 
 ```bash
 auth-service-test-BackDev/
 ├── cmd/
-│   ├── main.go
-│   └── .env
+│   └──main.go
 ├── docker-compose.yaml
 ├── Dockerfile
 ├── Makefile
@@ -64,11 +63,11 @@ auth-service-test-BackDev/
 PG_DATABASE_NAME=your_database_name
 PG_USER=your_database_user
 PG_PASSWORD=your_database_password
-PG_PORT=5432
+PG_PORT=your_port
 MIGRATION_DIR=./migrations
 DATABASE_URL=postgres://your_database_user:your_database_password@pg:5432/your_database_name?sslmode=disable
 SECRET_KEY=your_secret_key
-PORT=8080
+PORT=your_port
 ```
 ## API Маршруты
 
@@ -146,4 +145,4 @@ make local-migration-status
 
 ## Авторы
 
-- **Ваше Имя** — [titoffon](https://github.com/titoffon)
+- **Титов Виталий** — [titoffon](https://github.com/titoffon)
